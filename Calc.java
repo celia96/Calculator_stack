@@ -1,5 +1,5 @@
+// Celia Choy
 // Postfix Calculator Applet
-//
 
 import java.applet.*;
 import java.awt.*;
