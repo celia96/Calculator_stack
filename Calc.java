@@ -1,6 +1,5 @@
 // Postfix Calculator Applet
 //
-// CS 201 HW 8  -  Skeleton
 
 import java.applet.*;
 import java.awt.*;
