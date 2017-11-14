@@ -211,18 +211,29 @@ public class Calc extends Applet implements ActionListener {
         
     }
     protected void pop() {
-    	 System.out.println("pop was pressed");
-    	 if (entered == true) {
-    		 stack.pop();
-    		 show(stack.peek());
-    		 current = 0;
-    	 } else {
-    		 entered = true;
-    		 show(stack.peek());
-    		 current = 0;
-    	 }
-    }
-    protected void div() {
+	 System.out.println("pop was pressed");
+   	 if (stack.empty()) {
+   		 current = 0;
+   	 } else {
+		 if (entered == true) {
+			 stack.pop();
+			 if (stack.empty()) {
+				 current = 0;
+			 } else {
+				 current = stack.peek();
+			 }
+		 } else {
+			 if (stack.empty()) {
+				 current = 0;
+			 } else {
+				 entered = true;
+				 current = stack.peek();
+			 }
+		 }
+   	 }
+   	 show(current);
+   }
+   protected void div() {
     	 System.out.println("div was pressed");
     	 if (entered == true) {
           	int a = stack.pop();
