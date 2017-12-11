@@ -32,20 +32,6 @@ public class Calc extends Applet implements ActionListener {
 
     public void init() {
         setFont(new Font("TimesRoman", Font.BOLD, 28));
-
-        // add your code here to set up the applet.
-	
-        // hint: to get the blue border around the result label,
-        // I used a BorderLayout and added empty labels to the borders
-
-        // make good use of helper methods to keep your code readable -
-        // a rule of thumb is: if it doesn't fit on the screen, the
-        // method is too long (and you might loose points :( )
-
-
-        // just a placeholder to get it to compile and to demonstrate
-        // the event handling:
-        
         this.current = 0;
         this.stack = new Stack<Integer>();
         this.entered = false;
@@ -95,7 +81,6 @@ public class Calc extends Applet implements ActionListener {
         add("South", p3);
     }
    
-    // a useful helper methods, given to you for free!
 
     // create a colored button
     protected Button CButton(String s, Color fg, Color bg) {
